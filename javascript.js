@@ -5,24 +5,24 @@ $(document).ready(function() {
   var gameOn = false;
   var count = 0;
 
-  var startTurn = prompt("Choose Your Move", "Type X or O").toUpperCase();
+  var startTurn = prompt("Start spillet", "Type X or O").toUpperCase();
   switch (startTurn) {
     case "X":
       computerTurn = "O";
       turn = "X";
-      $("#message").html("Player " + turn + " gets to start!");
+      $("#message").html("Spiller " + turn + " starter!");
       break;
     case "O":
       computerTurn = "X";
       turn = "O";
-      $("#message").html("Player " + turn + " gets to start!");
+      $("#message").html("Spiller " + turn + " Starter!");
       break;
     case null:
-      alert("Sorry. Please type X or O");
+      alert("Sorry. Trykk X Eller O");
       window.location.reload(true);
       break;
     default:
-      alert("Sorry. Please type X or O");
+      alert("Sorry. Trykk X Eller O");
       window.location.reload(true);
       break;
   }
@@ -202,7 +202,7 @@ $(document).ready(function() {
       if (gameOn === false) {
         computersTurn();
         console.log("---");
-        $("#message").html("It's " + turn + "'s turn.");
+        $("#message").html("Spiller " + turn + "'s Tur.");
         winCondition(turns, computerTurn);
       }
     }
